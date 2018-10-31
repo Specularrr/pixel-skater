@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce);
             //jumpForce = (Time.deltaTime * 200);
-            Debug.Log("Jump pressed, force = " + jumpForce);
+            
         }
 
         //if (Input.GetKeyUp("space"))

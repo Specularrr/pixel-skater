@@ -27,15 +27,16 @@ public class Tiling : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		SpriteRenderer sRenderer = GetComponent<SpriteRenderer>();
-		spriteWidth = sRenderer.sprite.bounds.size.x;
-	}
+        spriteWidth = sRenderer.sprite.bounds.size.x;
+        //spriteWidth = sRenderer.sprite.bounds.size.x * myTransform.localScale.x;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		//does it still need buddies? if not. do nothing
 		if (hasLeftBuddy == false || hasRightBuddy == false)
 		{
-			//calc the cameras extend (half of the width) of what the camera can see in world coordinates)
+			//calc the cameras extend (half of the width) of what the camera can see in world coordinates
 			float camHorizontalExtend = cam.orthographicSize * Screen.width/Screen.height;
 
 			//calc x position where the camera can see the edge of the sprite
